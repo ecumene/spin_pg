@@ -12,7 +12,7 @@ fn get_animals() -> String {
                 .method("GET")
                 .uri("http://localhost:3000/animals")
                 .body(None)
-                .expect("Sitemap: Request build error."),
+                .expect("Postgrest: Request build error."),
         )
         .expect("Postgrest: Network error.")
         .body()

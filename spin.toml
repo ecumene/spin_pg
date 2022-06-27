@@ -1,0 +1,15 @@
+authors = ["Mitchell Hynes <me@mitchellhynes.com>"]
+name = "spin_pg"
+spin_version = "1"
+trigger = {type = "http", base = "/"}
+version = "1.0.0"
+
+[[component]]
+allowed_http_hosts = ["http://localhost:3000"]
+description = "Queries postgrest"
+id = "spin_pg"
+source = "target/wasm32-wasi/release/spin_pg.wasm"
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"

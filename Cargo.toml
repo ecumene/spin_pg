@@ -1,0 +1,17 @@
+[package]
+edition = "2021"
+name = "spin_pg"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1"
+bytes = "1"
+http = "0.2"
+spin-sdk = {git = "https://github.com/fermyon/spin", tag = "v0.3.0"}
+wit-bindgen-rust = {git = "https://github.com/bytecodealliance/wit-bindgen", rev = "e9c7c0a3405845cecd3fe06f3c20ab413302fc73"}
+
+[workspace]
+
